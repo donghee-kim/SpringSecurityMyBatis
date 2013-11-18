@@ -9,13 +9,13 @@ Spring Security Provides both Authentication and Authority in JavaEE-Based Envir
 	- web.xml Configuration / Filter Declaration
 	- It provides a hook into Spring Security Web InfraStructure
 
-		 <filter>
-		 	<filter-name>springSecurityFilterChain</filter-name>
-		 	<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-		 </filter>
-		 <filter-mapping>
-			<filter-name>springSecurityFilterChain</filter-name>
-		  <url-pattern> /* </url-pattern>
+		 &lt;filter>
+		 	&lt;filter-name>springSecurityFilterChain&lt;/filter-name>
+		 	&lt;filter-class>org.springframework.web.filter.DelegatingFilterProxy&lt;/filter-class>
+		 &lt;/filter>
+		 &lt;filter-mapping>
+			&lt;filter-name>springSecurityFilterChain&lt;/filter-name>
+		  &lt;url-pattern> /* &lt;/url-pattern>
 		 </fitler-mapping>
 
 
