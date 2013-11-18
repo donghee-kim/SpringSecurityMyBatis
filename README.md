@@ -30,7 +30,9 @@ Spring Security Provides both Authentication and Authority in JavaEE-Based Envir
 	&lt;http auto-config='true'>
 		&lt;intercept-url pattern="/**" method="" access="ROLE_USER"/>
 	&lt;/http>
-        *http elements create bean FilterChainProxy named "springSecurityFilterChain"
+        *http element creates bean FilterChainProxy named "springSecurityFilterChain"
+	(SecurityContextPersistenceFilter, ExceptionTranslationFilter,FilterSecurityInterceptor) - these are fixed
+	(All filters are rquired a reference to the AuthenticaionManager
 	
 	&lt;authentication-manager>
 		&lt;authentication-provider>
@@ -43,6 +45,12 @@ Spring Security Provides both Authentication and Authority in JavaEE-Based Envir
 	* authentication-provider (child of authentication-manager which creates ProviderManager and registers the authentication providers with it) element creates DaoAuthenticationProvider bean
 	* user-service element creates an InMemoryDaoImpl bean
 	* 
+    Advanced Web Features
+      - Remember me
+      - Adding HTTP/HTTPS Channel Security
+      - Session Management
+      	- Detecting Timeouts
+      	- Concurrent Session Control
 
 
 
