@@ -16,7 +16,7 @@ Spring Security Provides both Authentication and Authority in JavaEE-Based Envir
 		 &lt;filter-mapping>
 			&lt;filter-name>springSecurityFilterChain&lt;/filter-name>
 		  &lt;url-pattern> /* &lt;/url-pattern>
-		 </fitler-mapping>
+		 &lt;/fitler-mapping>
 
 
 	  * DelegatingFilterProxy is a Spring Framework class which delegates to a filter implementation (Spring bean)
@@ -25,20 +25,20 @@ Spring Security Provides both Authentication and Authority in JavaEE-Based Envir
     * Adding this to web.xml as uppon, it's ready to start editing your application context file.
     * 
   
-	- <http> configuration
+	- &lt;http> configuration
 		- Enable Web Security Sevices
-	<http auto-config='true'>
-		<intercept-url pattern="/**" method="" access="ROLE_USER"/>
-	</http>
+	&lt;http auto-config='true'>
+		&lt;intercept-url pattern="/**" method="" access="ROLE_USER"/>
+	&lt;/http>
         *http elements create bean FilterChainProxy named "springSecurityFilterChain"
 	
-	<authentication-manager>
-		<authentication-provider>
-			<user-service>
-				<user name ="jimi" password="jimipassword" authorities="ROLE_USER, ROLE_ADMIN"/>
-			</user-serivce>
-		</authentication-provider>
-	</authentication-manager>
+	&lt;authentication-manager>
+		&lt;authentication-provider>
+			&lt;user-service>
+				&lt;user name ="jimi" password="jimipassword" authorities="ROLE_USER, ROLE_ADMIN"/>
+			&lt;/user-serivce>
+		&lt;/authentication-provider>
+	&lt;/authentication-manager>
 
 	* authentication-provider (child of authentication-manager which creates ProviderManager and registers the authentication providers with it) element creates DaoAuthenticationProvider bean
 	* user-service element creates an InMemoryDaoImpl bean
