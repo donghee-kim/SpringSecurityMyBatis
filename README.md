@@ -52,7 +52,17 @@ Spring Security Provides both Authentication and Authority in JavaEE-Based Envir
       	- Detecting Timeouts
       	- Concurrent Session Control
 
-
+   Method Security
+   	- From 2.0 JSR-250, @Secured annotation
+   	- From 3.0 expression-based annotation
+   	- apply security to a intercept-methods elements, entire service layer using AspectJ style pointcuts.
+   	
+   	@Secured Support
+   	&lt;global-method-security secured-annotations="enable"/>
+   	JSR-250 annotation
+   	&lt;global-method-security jsr250-annotations="enable"/>
+   	To use expression-based systax (recommaned if need to define role ... )
+   	&lt;global-method-security pre-post-annotation="enable"/>
 
 
 	
